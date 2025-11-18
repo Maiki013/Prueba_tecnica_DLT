@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Sedan&family=Sedan+SC&display=swap");
+
+// VARIABLES GLOBALES
+
+$primary: #9c5ce1;   // Color principal (botones, highlights)
+$secondary: #c77e01; // Color secundario (labels, títulos)
+$dark: #222222;       // Texto oscuro
+$light: #777777;      // Texto secundario
+
+$font-title: "Sedan SC", serif; // Para títulos y mayúsculas
+$font-text: "Sedan", serif;     // Para texto normal
+
+
+//  VARIABLES CSS PARA JS / SCSS
+
+:root {
+  --color-primary: #9c5ce1;
+  --color-secondary: #c77e01;
+  --color-dark: #222222;
+  --color-light: #777777;
+
+  --font-title: #{$font-title};
+  --font-text: #{$font-text};
+
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+//  MODO OSCURO
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #fffcfc;
+    --foreground: #ededed;
+  }
+}
+
+//   ESTILOS GLOBALES DEL BODY
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-text); // Fuente base
+}
+
+
+//   CLASES PARA TIPOGRAFÍA
+
+// Títulos o texto en mayúsculas
+.sedan-sc-regular {
+  font-family: "Sedan SC", serif;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+// Texto normal
+.sedan-regular {
+  font-family: "Sedan", serif;
+  font-weight: 400;
+  font-style: normal;
+}

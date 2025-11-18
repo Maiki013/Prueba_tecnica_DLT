@@ -1,0 +1,113 @@
+// VARIABLES Y FUENTES
+
+
+$primary: #9c5ce1;  
+$secondary: #c77e01; 
+$dark: #222222;       
+$light: #777777;      
+
+
+// CONTENEDOR PRINCIPAL
+
+.login-container {
+  display: flex;
+  height: 100vh;   
+  overflow: hidden; 
+}
+
+// IMAGEN DEL LOGIN
+
+.login-image {
+  width: 50%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden; 
+}
+
+
+// WRAPPER DEL FORMULARIO
+
+.login-form-wrapper {
+  width: 50%;             
+  display: flex;              
+  align-items: center;           
+  justify-content: center;       
+}
+
+
+// FORMULARIO
+
+.login-form {
+  width: 70%;        
+  max-width: 420px; 
+}
+
+
+// TÍTULO
+
+.title {
+  font-family: var(--font-title); 
+  font-size: 2rem;                
+  color: $secondary;              
+  margin-bottom: 0.5rem;          
+  text-transform: uppercase;      
+}
+
+// SUBTÍTULO
+
+.subtitle {
+  font-family: var(--font-text); 
+  font-size: 0.95rem;            
+  color: $dark;                  
+  margin-bottom: 2rem;           
+  max-width: 380px;             
+}
+
+// LABELS DE INPUT
+
+.input-label {
+  display: block;               
+  margin-top: 1rem;             
+  margin-bottom: 0.3rem;       
+  font-family: var(--font-text);
+  font-size: 0.9rem;
+  color: $primary;
+}
+
+// CAMPOS DE INPUT
+
+.input {
+  width: 100%;                
+  padding: 0.9rem 1rem;
+  border: none;
+  border-radius: 10px;
+  background: #f4f4f4; 
+  font-size: 0.95rem;    
+  font-family: var(--font-text);
+}
+
+// BOTÓN DE LOGIN
+
+.login-button {
+  width: 100%;                
+  margin-top: 1.5rem;        
+  padding: 0.9rem;             
+  background-color: $primary;
+  color: white;             
+  border: none;               
+  border-radius: 10px;       
+  font-size: 1rem;           
+  cursor: pointer;          
+  font-family: var(--font-title);
+  text-transform: uppercase; 
+}
+
+// TEXTO DE REGISTRO
+
+.register-text {
+  margin-top: 1.5rem;           
+  text-align: center;           
+  font-size: 0.9rem;           
+  color: $light;               
+  font-family: var(--font-text); 
+}
