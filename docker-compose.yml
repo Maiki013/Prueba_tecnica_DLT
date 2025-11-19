@@ -1,0 +1,30 @@
+services:
+  mysql:
+    image: mysql:8
+    container_name: bestiario_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: abc123.
+      MYSQL_DATABASE: bestiario_db
+      MYSQL_USER: user
+      MYSQL_PASSWORD: abc123.
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: bestiario_phpmyadmin
+    restart: always
+    environment:
+      PMA_HOST: mysql
+      PMA_USER: user
+      PMA_PASSWORD: abc123.
+    ports:
+      - "8080:80"
+    depends_on:
+      - mysql
+
+volumes:
+  mysql_data:

@@ -1,3 +1,5 @@
+@use "sass:color";
+
 // VARIABLES Y FUENTES
 $primary: #9c5ce1;
 $secondary: #c77e01;
@@ -5,28 +7,25 @@ $dark: #222222;
 $light: #777777;
 $input-bg: #f4f4f4;
 
-//RESET BÁSICO
 body {
   margin: 0;
   padding: 0;
 }
 
-//ESTRUCTURA
-
+// ESTRUCTURA
 .login-container {
   display: flex;
   height: 100vh;
 }
 
-//IMAGEN DEL LOGIN
+// IMAGEN DEL LOGIN
 .login-image {
   width: 50%;
   height: 100vh;
   position: relative;
 }
 
-
-//FORMULARIO
+// FORMULARIO
 .login-form-wrapper {
   width: 50%;
   display: flex;
@@ -39,8 +38,7 @@ body {
   max-width: 420px;
 }
 
-//COMPONENTES
-
+// COMPONENTES
 .title {
   font-family: var(--font-title);
   font-size: 2rem;
@@ -57,7 +55,7 @@ body {
   max-width: 380px;
 }
 
-//LABELS DE INPUT
+// LABELS DE INPUT
 .input-label {
   display: block;
   margin-top: 1rem;
@@ -67,18 +65,18 @@ body {
   color: $primary;
 }
 
-//CAMPOS DE INPUT
+// CAMPOS DE INPUT
 .input {
   width: 100%;
   padding: 0.9rem 1rem;
   border: none;
   border-radius: 10px;
-  background: #f4f4f4; 
+  background: #f4f4f4;
   font-size: 0.95rem;
   font-family: var(--font-text);
 }
 
-//BOTÓN DE LOGIN
+// BOTÓN DE LOGIN
 .login-button {
   width: 100%;
   margin-top: 1.5rem;
@@ -91,13 +89,13 @@ body {
   cursor: pointer;
   font-family: var(--font-title);
   text-transform: uppercase;
-  
+
   &:hover {
-    background-color: darken($primary, 8%);
+    background-color: color.adjust($primary, $lightness: -8%);
   }
 }
 
-//TEXTO DE REGISTRO
+// TEXTO DE REGISTRO
 .register-text {
   margin-top: 1.5rem;
   text-align: center;
@@ -105,9 +103,9 @@ body {
   color: $light;
   font-family: var(--font-text);
 
-//Etiqueta <a> (enlace)
+  // Etiqueta <a> (enlace)
   a {
-    color: inherit;              
-    text-decoration: none;     
+    color: inherit;
+    text-decoration: none;
   }
 }

@@ -1,0 +1,151 @@
+@use "sass:color";
+
+// VARIABLES Y FUENTES
+$primary: #9c5ce1;
+$secondary: #c77e01;
+$dark: #222222;
+$light: #777777;
+$input-bg: #f4f4f4;
+
+// RESETEO GENERAL
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+// CONTENEDOR GENERAL
+.profile-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden; 
+}
+
+// IMAGEN LADO IZQUIERDO
+.profile-image {
+  width: 32%;            
+  height: 100vh;
+  position: relative;
+
+  img {
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+// COLUMNA DERECHA
+.profile-content {
+  width: 68%;
+  padding: 2rem 3rem;  
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  overflow: hidden;      
+}
+
+// HEADER / NAVBAR
+.profile-header {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.profile-logo {
+  font-family: var(--font-title);
+  font-size: 1.6rem;   
+  color: $secondary;
+  text-transform: uppercase;
+}
+
+.profile-nav {
+  display: flex;
+  gap: 1.5rem;
+  font-family: var(--font-text);
+  font-size: 0.9rem;
+}
+
+.nav-link {
+  cursor: pointer;
+  text-decoration: none;
+  color: $dark;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+
+  &--active {
+    padding: 0.3rem 0.8rem;
+    border-radius: 999px;
+    background-color: rgba(156, 92, 225, 0.1);
+    color: $primary;
+  }
+}
+
+.profile-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  max-height: 100%;
+  overflow: hidden;
+}
+
+.profile-title {
+  font-family: var(--font-title);
+  font-size: 1.6rem;
+  color: $secondary;
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+}
+
+.profile-subtitle {
+  font-family: var(--font-text);
+  font-size: 0.9rem;
+  color: $dark;
+  margin-bottom: 1.6rem;
+  max-width: 540px;
+}
+
+
+.profile-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem; 
+}
+
+.profile-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.profile-label {
+  font-family: var(--font-text);
+  font-size: 0.8rem;
+  color: $primary;
+  text-transform: uppercase;
+}
+
+.profile-input,
+.profile-textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  background-color: $input-bg;
+  font-family: var(--font-text);
+  font-size: 0.9rem;
+  color: $dark;
+}
+
+.profile-textarea {
+  height: 120px;
+  line-height: 1.5;
+  overflow: hidden;      
+}
+
+.read-only {
+  border: none;
+}
