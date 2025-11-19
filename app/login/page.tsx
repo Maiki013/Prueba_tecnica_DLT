@@ -1,6 +1,5 @@
 // app/login/page.tsx
 import Image from "next/image";
-import Link from "next/link";
 import "./login.scss";
 
 export default function LoginPage() {
