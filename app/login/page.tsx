@@ -1,22 +1,22 @@
 // app/login/page.tsx
 import Image from "next/image";
+import Link from "next/link";
 import "./login.scss";
 
 export default function LoginPage() {
   return (
     <div className="login-container">
-     
+      
       <div className="login-image">
-     <Image
-  src="/login.png"
-  alt="Imagen de login"
-  fill
-  style={{ objectFit: "cover" }}
-  
-/>
-
-</div>
-      {/* Formulario de login */}
+        <Image
+          src="/login.png"
+          alt="Imagen de login"
+          fill
+          style={{ objectFit: "cover" }}
+        />
+      </div>
+      
+      {/*Formulario de login*/}
       <div className="login-form-wrapper">
         <div className="login-form">
           <h1 className="title">Inicia sesión</h1>
@@ -25,28 +25,37 @@ export default function LoginPage() {
             y los cuidadores reconocidos pueden entrar.
           </p>
 
-          <div>
-            <label className="input-label">Correo mágico</label>
+          <form>
+            {/*Campos de Input*/}
+            <label className="input-label" htmlFor="magic-email">Correo mágico</label>
             <input
               type="email"
+              id="magic-email"
               placeholder="tunombre@santuario.com"
               className="input"
+              required
             />
 
-            <label className="input-label">Palabra mágica</label>
+            <label className="input-label" htmlFor="magic-password">Palabra mágica</label>
             <input
               type="password"
+              id="magic-password"
               placeholder="Introduce tu contraseña"
               className="input"
+              required
             />
 
-            <button className="login-button">
+            <button type="submit" className="login-button">
               Acceder al santuario
             </button>
-          </div>
+          </form>
 
+          {/*REGISTRO CON ENLACE*/}
           <p className="register-text">
-            ¿No tienes cuenta? Regístrate como maestro o cuidador
+              ¿No tienes cuenta? 
+            <a href="/register">
+              Regístrate como maestro o cuidador
+            </a>
           </p>
         </div>
       </div>
