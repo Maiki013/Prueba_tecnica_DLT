@@ -7,26 +7,26 @@ $dark: #222222;
 $light: #777777;
 $input-bg: #f4f4f4;
 
-// RESETEO GENERAL
+// RESETEO
 html,
 body {
   margin: 0;
   padding: 0;
   height: 100%;
-  overflow: hidden;
+  overflow: hidden; // sin scroll
 }
 
 // CONTENEDOR GENERAL
-.profile-container {
+.creatures-container {
   display: flex;
   height: 100vh;
   width: 100vw;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 // IMAGEN LADO IZQUIERDO
-.profile-image {
-  width: 25%;            
+.creatures-image {
+  width: 32%;
   height: 100vh;
   position: relative;
 
@@ -37,36 +37,36 @@ body {
 }
 
 // COLUMNA DERECHA
-.profile-content {
+.creatures-content {
   width: 68%;
-  padding: 2rem 3rem;  
+  padding: 2rem 3rem;
   display: flex;
   flex-direction: column;
   background-color: #ffffff;
-  overflow: hidden;      
+  overflow: hidden;
 }
 
 // HEADER / NAVBAR
-.profile-header {
+.creatures-header {
   flex-shrink: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.8rem;
 }
 
-.profile-logo {
+.creatures-logo {
   font-family: var(--font-title);
-  font-size: 1.6rem;   
+  font-size: 1.8rem;
   color: $secondary;
   text-transform: uppercase;
 }
 
-.profile-nav {
+.creatures-nav {
   display: flex;
-  gap: 1.5rem;
+  gap: 1.6rem;
   font-family: var(--font-text);
-  font-size: 0.9rem;
+  font-size: 0.95rem;
 }
 
 .nav-link {
@@ -74,77 +74,74 @@ body {
   text-decoration: none;
   color: $dark;
   text-transform: uppercase;
+  letter-spacing: 0.04em;
 
-
-    padding: 0.3rem 0.8rem;
+  &--active {
+    padding: 0.4rem 1.1rem;
     border-radius: 999px;
-    background-color: rgba(156, 92, 225, 0.1);
+    background-color: rgba(156, 92, 225, 0.12);
     color: $primary;
-  
+  }
 }
 
-.profile-main {
+// CONTENIDO PRINCIPAL
+.creatures-main {
   flex: 1;
   display: flex;
   flex-direction: column;
   max-height: 100%;
-  overflow: hidden;
 }
 
-.profile-title {
+.creatures-title {
   font-family: var(--font-title);
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   color: $secondary;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.5rem;
   text-transform: uppercase;
 }
 
-.profile-subtitle {
+.creatures-subtitle {
   font-family: var(--font-text);
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: $dark;
-  margin-bottom: 1.6rem;
-  max-width: 540px;
+  max-width: 620px;
+  margin-bottom: 3rem;
 }
 
-
-.profile-form {
+// ESTADO VACÍO
+.creatures-empty {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 1.1rem; 
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 1rem;
 }
 
-.profile-field {
-  display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
-}
-
-.profile-label {
+.empty-text {
   font-family: var(--font-text);
-  font-size: 0.8rem;
-  color: $primary;
-  text-transform: uppercase;
-}
-
-.profile-input,
-.profile-textarea {
-  width: 100%;
-  padding: 0.75rem 1rem;
-  border-radius: 10px;
-  background-color: $input-bg;
-  font-family: var(--font-text);
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: $dark;
+  text-align: center;
+  margin-bottom: 2.2rem;
 }
 
-.profile-textarea {
-  height: 120px;
-  line-height: 1.5;
-  overflow: hidden;      
-}
+// BOTÓN PRINCIPAL
+.add-creature-button {
 
-.read-only {
+  padding: 0.95rem 4rem;
   border: none;
+  border-radius: 999px;
+  background-color: $primary;
+  color: #ffffff;
+  font-family: var(--font-title);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  
+  box-shadow: 0 4px 12px rgba(156, 92, 225, 0.45);
+  letter-spacing: 0.04em;
+
+  &:hover {
+    background-color: color.adjust($primary, $lightness: -6%);
+  }
 }
